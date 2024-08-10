@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+.App {
+  text-align: center;
+}
+
+.stopwatch {
+  background: white;
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.5s ease;
+  width: 320px;
+}
+
+.stopwatch:hover {
+  transform: scale(1.05);
+}
+
+.time {
+  font-size: 56px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 1.5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.buttons button, .theme-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:disabled, .theme-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.start-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.stop-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.stop-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+.reset-button {
+  background-color: #ffc107;
+  color: black;
+}
+
+.reset-button:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+}
+
+.lap-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.lap-button:hover {
+  background-color: #0069d9;
+  transform: translateY(-2px);
+}
+
+.toggle-dark-mode {
+  background-color: #6f42c1;
+  color: white;
+  margin-top: 40px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-dark-mode:hover {
+  background-color: #5a32a3;
+  transform: translateY(-2px);
+}
+
+.theme-buttons {
+  margin-top: 10px;
+}
+
+.theme-button {
+  background-color: #f5a623;
+  color: white;
+  margin: 5px;
+}
+
+.theme-button:hover {
+  background-color: #e59400;
+  transform: translateY(-2px);
+}
+
+.laps, .history {
+  margin-top: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.laps h2, .history h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.laps div, .history div {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #555;
+}
+
+.stopwatch.dark {
+  background-color: #2c2c2c;
+  color: #f8f9fa;
+  transition: background-color 0.5s ease;
+}
+
+.stopwatch.dark .time {
+  color: #f8f9fa;
+}
+
+.stopwatch.dark .laps h2,
+.stopwatch.dark .laps div,
+.stopwatch.dark .history h2,
+.stopwatch.dark .history div {
+  color: #f8f9fa;
+}
+
+.stopwatch.dark .buttons button {
+  color: white;
+}
+
+.stopwatch.dark .start-button {
+  background-color: #28a745;
+}
+
+.stopwatch.dark .stop-button {
+  background-color: #c82333;
+}
+
+.stopwatch.dark .reset-button {
+  background-color: #e0a800;
+}
+
+.stopwatch.dark .lap-button {
+  background-color: #007bff;
+}
+
+.stopwatch.dark .toggle-dark-mode {
+  background-color: #5a32a3;
+}
+
+.stopwatch.colorful {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.stopwatch.pastel {
+  background: linear-gradient(135deg, #a0c4ff, #f8cfcf);
+}
+
+.stopwatch.contrast {
+  background: linear-gradient(135deg, #000000, #ffffff);
+}
